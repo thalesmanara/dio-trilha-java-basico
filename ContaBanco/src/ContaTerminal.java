@@ -20,7 +20,7 @@ public class ContaTerminal {
 
         Scanner escanear = new Scanner(System.in);
 
-        //Aqui abaixo definirei as variáveis
+        //Aqui abaixo definirei as variáveis e as inicializarei
         int numeroConta = 0;
         String agencia = "";
         String nomeCliente = "";
