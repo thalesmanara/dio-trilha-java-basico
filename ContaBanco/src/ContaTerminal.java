@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * <h1>ContaTerminal</h1>
  * Esse é o primeiro projeto do curso de Java da Dio
@@ -19,6 +17,7 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
+
         Scanner escanear = new Scanner(System.in);
 
         //Aqui abaixo definirei as variáveis
