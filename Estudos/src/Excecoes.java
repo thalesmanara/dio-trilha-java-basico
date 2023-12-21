@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 
 public class Excecoes {
     public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
+        Scanner leitor = new Scanner(System.in).useLocale(Locale.US);
         try{
             //Pegando os dados do aluno
             System.out.println("Digite o nome do aluno:");

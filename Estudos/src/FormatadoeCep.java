@@ -1,7 +1,7 @@
 public class FormatadoeCep {
     public static void main(String[] args) {
         try{
-            String cepFormatado = formatarCep("2376506");
+            String cepFormatado = formatarCep("23765064");
             System.out.println(cepFormatado);
         }
         catch(CepInvalidoException e){
@@ -16,4 +16,5 @@ public class FormatadoeCep {
 
         return "23.765-064";
     }
+
 }

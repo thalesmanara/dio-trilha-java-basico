@@ -1,9 +1,10 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public class ProcessoSeletivo {
     public static void main(String[] args) {
-        System.out.println("Processo seletivo");
-        System.out.println("Digite o salário pretendiodo pelo candidato:");
-        double 
+        selacaoCandidatos();
     }
+
     static void analisarCandidatura (double salarioPretendido){
         double salarioBase = 2000.0;
 
@@ -14,7 +15,34 @@ public class ProcessoSeletivo {
             System.out.println("LIGAR PARA O CANDIDATO COM CONTRA POPOSTA");
         }
         else{
-            System.out.println("AGUARDANDO O RESULTADO DOS SDEMAIS CANDIDATOS");
+            System.out.println("AGUARDANDO O RESULTADO DOS DEMAIS CANDIDATOS");
         }
+    }
+
+    static void selacaoCandidatos(){
+        String [] candidatos = {"FELIPE","MÁRCIA","JULIA","PAULO","AUGUSTO","MÔNICA","FABRÍCIO","MIRELA","DANIELA","JORGE"};
+
+        int candidatosSelecionados = 0;
+        int candidatoAtual = 0;
+        double salarioBase = 2000.0;
+        while (candidatosSelecionados < 5 && candidatoAtual < candidatos.length) {
+            String candidato = candidatos[candidatoAtual];
+            double salarioPretendido = valorPretendido();
+
+            System.out.println("O candidato " + candidato + " pretende ganhar R$" + salarioPretendido);
+
+            if (salarioBase >= salarioPretendido) {
+                System.out.println("O candidato " + candidato + " foi selecionado para a vaga");
+                candidatosSelecionados++;
+            }
+            else {
+                System.out.println("O candidato " + candidato + " não foi selecionado para a vaga");
+            }
+            candidatoAtual++;
+        }
+    }
+
+    static double valorPretendido() {
+        return ThreadLocalRandom.current().nextDouble(1800, 2200);
     }
 }
